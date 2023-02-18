@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Chart as ChartJS,
   RadialLinearScale,
@@ -20,7 +19,5 @@ ChartJS.register(
 );
 
 export default function RadarChart({ data, options }) {
-  return <Radar options={options} data={data} 
-  // style={{ height: "10%", width: "10%" }} 
-  />;
+  return <Radar options={options} data={data} />;
 }

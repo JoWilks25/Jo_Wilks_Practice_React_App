@@ -1,18 +1,7 @@
 import styled, { keyframes } from "styled-components";
+import { Text } from "../components/Typography";
+import { Row, Background, CenterCard } from "../components/Structural";
 
-const Background = styled.div`
-  width: 100vw;
-  height: 100vh;
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
-
-const CenterCard = styled.div`
-  width: 50vw;
-  height: 50vh;
-`
 
 interface FadeInProps {
   duration?: string;
@@ -32,15 +21,6 @@ const FadeIn = styled.div<FadeInProps>`
   animation-fill-mode: backwards;
 `;
 
-interface TextProps {
-  fontSize: string;
-}
-
-const Text = styled.div<TextProps>`
-  color: white;
-  font-size: ${({ fontSize }) => fontSize || '1rem'};
-  font-family: sans-serif;
-`
 
 interface LinkButtonProps {
   glowColour?: string;
@@ -63,32 +43,18 @@ const LinkButton = styled.a<LinkButtonProps>`
   }
 `
 
-interface RowProps {
-  justifyContent?: string;
-  padding?: string;
-  width?: string;
-}
-
-const Row = styled.div<RowProps>`
-  width: ${({ width }) => width || '100%'};
-  display: flex;
-  justify-content: ${({ justifyContent }) => justifyContent || 'center'};
-  padding: ${({ padding }) => padding || '1rem'};
-  flex-wrap: wrap
-`
-
 
 const Root = (): React.ReactElement =>
   <Background>
     <CenterCard>
       <Row padding="2rem 0">
         <FadeIn duration="2s" delay="0.5s">
-          <Text fontSize="2.5rem">Welcome to Jo's Portfolio</Text>
+          <Text fontColour="white" fontSize="2.5rem">Welcome to Jo's Portfolio</Text>
         </FadeIn>
       </Row>
       <Row padding="2rem 0">
         <FadeIn duration="2s" delay="2.5s">
-          <Text fontSize="2rem">Please select a flavour</Text>
+          <Text fontColour="white" fontSize="2rem">Please select a flavour</Text>
         </FadeIn>
       </Row>
       <Row justifyContent="space-around" padding="2rem 2rem 0 0">

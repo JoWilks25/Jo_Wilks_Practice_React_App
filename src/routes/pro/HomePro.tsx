@@ -3,6 +3,7 @@ import styled from "styled-components"
 import useIsElementVisible from "../../utilities/useIsElementVisible"
 import RadarChart from "../../components/RadarChart";
 import { programmingData, otherSkillsData, chartOptions } from "./RadarChartData";
+import { Text } from "../../components/Typography";
 
 const PageWrapper = styled.div`
   height: 100%;
@@ -37,7 +38,6 @@ const ColumnWrapper = styled.div`
   padding: 0 0.5rem;
 `
 
-
 interface HomeProProps {
   scrollId: string;
   setSelectedTab: (selectedTab: string) => void;
@@ -60,7 +60,7 @@ const HomePro = ({ scrollId, setSelectedTab }: HomeProProps): React.ReactElement
   return (
     <PageWrapper id={scrollId} ref={scrollRef} >
       <CenterCard>
-        <h1>{scrollId}</h1>
+        <Text>{scrollId}</Text>
         <p>I am a senior React Developer working within the Banking sector, looking to return to Full Stack work building clean and simple products that provide value to the end user.</p>
         <p>I have a strong focus on developing good development processes and maintaining effective documentation.</p>
         <RowWrapper>
