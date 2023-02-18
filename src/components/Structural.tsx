@@ -19,12 +19,31 @@ interface RowProps {
   justifyContent?: string;
   padding?: string;
   width?: string;
+  flexDirection?: string;
 }
 
 export const Row = styled.div<RowProps>`
-  width: ${({ width }) => width || '100%'};
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: ${({ flexDirection }) => flexDirection || 'row'};
+  width: ${({ width }) => width || '100%'};
   justify-content: ${({ justifyContent }) => justifyContent || 'center'};
   padding: ${({ padding }) => padding || '1rem'};
-  flex-wrap: wrap
+`
+
+interface ColumnProps {
+  justifyContent?: string;
+  padding?: string;
+  width?: string;
+  alignItem?: string;
+  flexDirection?: string;
+}
+
+export const Column = styled.div<ColumnProps>`
+  display: flex;
+  flex-direction: ${({ flexDirection }) => flexDirection || 'column'};
+  width: ${({ width }) => width || '100%'};
+  justify-content: ${({ justifyContent }) => justifyContent || 'center'};
+  align-items: ${({ alignItem }) => alignItem || 'center'};
+  padding: ${({ padding }) => padding || '1rem'};
 `
