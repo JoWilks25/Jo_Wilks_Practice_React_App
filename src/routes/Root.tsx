@@ -32,9 +32,13 @@ const FadeIn = styled.div<FadeInProps>`
   animation-fill-mode: backwards;
 `;
 
-const Text = styled.div`
+interface TextProps {
+  fontSize: string;
+}
+
+const Text = styled.div<TextProps>`
   color: white;
-  font-size: 2rem;
+  font-size: ${({ fontSize }) => fontSize || '1rem'};
   font-family: sans-serif;
 `
 
@@ -80,12 +84,12 @@ const Root = (): React.ReactElement =>
     <CenterCard>
       <Row padding="2rem 0">
         <FadeIn duration="2s" delay="0.5s">
-          <Text>Welcome to Jo's Portfolio</Text>
+          <Text fontSize="2.5rem">Welcome to Jo's Portfolio</Text>
         </FadeIn>
       </Row>
       <Row padding="2rem 0">
         <FadeIn duration="2s" delay="2.5s">
-          <Text>Please select a flavour</Text>
+          <Text fontSize="2rem">Please select a flavour</Text>
         </FadeIn>
       </Row>
       <Row justifyContent="space-around" padding="2rem 2rem 0 0">
