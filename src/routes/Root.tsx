@@ -53,7 +53,6 @@ const LinkButton = styled.a<LinkButtonProps>`
   padding: 0.5rem 2rem;
   margin: 0.5rem;
   font-size: 1rem;
-  font-family: sans-serif;
   border: 2px solid white;
   border-radius: 4px;
   :hover {
