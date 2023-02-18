@@ -8,13 +8,12 @@ const PageWrapper = styled.div`
   margin-top: 4rem;
   display: flex;
   justify-content: center;
-  align-items: center;
 `
 
 const CenterCard = styled.div`
   width: 75%;
   height: 75%;
-  padding: 5rem;
+  padding: 2rem 5rem 0 5rem;
 `
 
 interface HomeProProps {
