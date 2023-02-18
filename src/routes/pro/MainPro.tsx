@@ -35,10 +35,10 @@ const MainPro = (): React.ReactElement => {
     <React.Fragment>
       <NavBar navItems={navItems} selectedTab={selectedTab} scrollToId={scrollToId} />
       <PageWrapper>
-        <HomePro scrollId="Home"/>
-        <HomePro scrollId="Work"/>
-        <HomePro scrollId="Education"/>
-        <HomePro scrollId="Contact"/>
+        <HomePro scrollId="Home" setSelectedTab={setSelectedTab}/>
+        <HomePro scrollId="Work" setSelectedTab={setSelectedTab}/>
+        <HomePro scrollId="Education" setSelectedTab={setSelectedTab}/>
+        <HomePro scrollId="Contact" setSelectedTab={setSelectedTab} />
       </PageWrapper>
     </React.Fragment>
   )

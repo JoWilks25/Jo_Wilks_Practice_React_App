@@ -36,7 +36,6 @@ export interface navItem {
 
 interface NavBarProps {
   navItems: navItem[];
-  // setSelectedTab: (selectedTab: string) => void;
   scrollToId: (id: string) => void;
   selectedTab: string;
 }
