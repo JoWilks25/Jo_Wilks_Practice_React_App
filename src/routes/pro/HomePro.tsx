@@ -15,6 +15,10 @@ const PageWrapper = styled.div`
   justify-content: flex-start;
   flex-direction: column;
   padding: 0 ${cssStyles.size.heightNavbar};
+  @media only screen and (max-width: 851px) {
+    padding: 0 0 0 1rem;
+    width: 100%;
+  }
 `
 
 
@@ -37,20 +41,19 @@ const HomePro = ({ scrollId, setSelectedTab }: HomeProProps): React.ReactElement
 
   return (
     <PageWrapper id={scrollId} ref={scrollRef} >
-      <Row className="row" flexDirection="row" justifyContent="space-between" padding="0">
+      <Row className="row" flexDirection="row" justifyContent="center" padding="0">
         <H1Styled fontColour={cssStyles.colours.navy} textAlign="left">{scrollId}</H1Styled>
       </Row>
-      <Row className="row" flexDirection="row" justifyContent="space-between" padding="0">
-        <Column className="column" width="50%" padding="0" justifyContent="flex-start">
-          <PStyled>I am a senior React Developer working within the Banking sector, looking to return to Full Stack work building clean and simple products that provide value to the end user.</PStyled>
-          <PStyled>I have a strong focus on developing good development processes and maintaining effective documentation.</PStyled>
+      <Row className="row" width="100%" flexDirection="row" justifyContent="center">
+        <Column className="column" padding="0" justifyContent="center" width="50%">
+          <PStyled textAlign="justify">I'm a Senior React Developer working within the Banking sector. I'm looking to return to Full Stack work building clean and simple products that provide value to the end user. I have a strong focus on developing good development processes and maintaining effective documentation.</PStyled>
         </Column>
-        <Column className="column" width="30%" flexDirection="row" justifyContent="flex-start">
+        {/* <Column className="column" width="30%" flexDirection="row" justifyContent="flex-start">
           <a href={"https://github.com/JoWilks25"} target="_blank" style={{
             padding: "1rem", textDecoration: "None", color: "black"
           }}><FaGithub size={50} /></a>
           <a href={"https://www.linkedin.com/in/joanne-wilkins-aa3416146/"} target="_blank" style={{ padding: "1rem", textDecoration: "None", color: "#0A66C2" }}><FaLinkedin size={50} /></a>
-        </Column>
+        </Column> */}
       </Row>
       <Row className="row" flexDirection="row" justifyContent="space-evenly" padding="0">
         <Column className="column" width="35%" padding="0">

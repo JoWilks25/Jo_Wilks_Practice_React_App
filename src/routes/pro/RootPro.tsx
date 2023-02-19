@@ -7,6 +7,11 @@ import WorkPro from "./WorkPro/WorkPro";
 const PageWrapper = styled.div`
   height: calc(100vh - 4rem);
   width: 100vw;
+  @media only screen and (max-width: 851px) {
+    padding: 0 0 0 0;
+    width: 100%;
+    height: auto;
+  }
 `
 
 const navItems = [

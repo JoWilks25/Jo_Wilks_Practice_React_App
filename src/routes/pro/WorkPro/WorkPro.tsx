@@ -12,6 +12,10 @@ const PageWrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0 ${cssStyles.size.heightNavbar};
+  @media only screen and (max-width: 851px) {
+    padding: 0 0 0 1rem;
+    width: 100%;
+  }
 `
 
 interface WorkProProps {
@@ -32,7 +36,7 @@ const WorkPro = ({ scrollId, setSelectedTab }: WorkProProps): React.ReactElement
 
   return (
     <PageWrapper id={scrollId} ref={scrollRef} >
-      <Row className="row" flexDirection="row" justifyContent="space-between">
+      <Row className="row" flexDirection="row" justifyContent="center">
         <H1Styled fontColour={cssStyles.colours.navy} textAlign="left">{scrollId}</H1Styled>
       </Row>
       {/* Calibrate Consulting */}

@@ -36,6 +36,12 @@ export const Row = styled.div<RowProps>`
   width: ${({ width }) => width || '100%'};
   justify-content: ${({ justifyContent }) => justifyContent || 'center'};
   padding: ${({ padding }) => padding || '1rem'};
+  @media only screen and (max-width: 851px) {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    justify-content: center;
+  }
 `
 
 interface ColumnProps {
@@ -53,4 +59,10 @@ export const Column = styled.div<ColumnProps>`
   justify-content: ${({ justifyContent }) => justifyContent || 'center'};
   align-items: ${({ alignItem }) => alignItem || 'center'};
   padding: ${({ padding }) => padding || '1rem'};
+  @media only screen and (max-width: 851px) {
+    width: 100%;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+  }
 `

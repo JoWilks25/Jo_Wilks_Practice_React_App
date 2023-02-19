@@ -3,7 +3,7 @@ import cssStyles from "../styles";
 
 
 const Header = styled.div<any>`
-  width: 100vw;
+  width: 100%;
   height: ${cssStyles.size.heightNavbar};
   background-color: ${cssStyles.colours.navy};
   display: flex;
@@ -29,6 +29,10 @@ const LinkContainer = styled.button<LinkContainerProps>`
   :hover {
     background-color: ${cssStyles.colours.lightGreyishBlue};
     color: gold;
+  }
+  @media only screen and (max-width: 851px) {
+    font-size: 1.25rem;
+    padding: 0.5rem;
   }
 `
 

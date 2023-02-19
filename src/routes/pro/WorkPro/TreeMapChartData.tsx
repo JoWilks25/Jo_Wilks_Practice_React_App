@@ -85,7 +85,7 @@ const calibrateTreeMapData: any = {
       "colname": "level2"
     },
   ],
-  "name": "% allocation per stack per project"
+  "name": "% allocation language/stack per project"
 }
 
 const calibrateDomain = [
@@ -159,7 +159,7 @@ const arkeraTreeMapData: any = {
       "colname": "level2"
     },
   ],
-  "name": "% allocation per stack per project"
+  "name": "% allocation language/stack per project"
 }
 
 const arkeraDomain = [
