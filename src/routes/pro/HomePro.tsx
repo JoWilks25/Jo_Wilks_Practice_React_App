@@ -49,7 +49,7 @@ const HomePro = ({ scrollId, setSelectedTab }: HomeProProps): React.ReactElement
             <PStyled>I am a senior React Developer working within the Banking sector, looking to return to Full Stack work building clean and simple products that provide value to the end user.</PStyled>
             <PStyled>I have a strong focus on developing good development processes and maintaining effective documentation.</PStyled>
           </Column>
-          <Column className="column" width="30%" flexDirection="row">
+          <Column className="column" width="30%" flexDirection="row" justifyContent="flex-start">
             <a href={"https://github.com/JoWilks25"} target="_blank" style={{
               padding: "1rem", textDecoration: "None", color: "black"
             }}><FaGithub size={50} /></a>
