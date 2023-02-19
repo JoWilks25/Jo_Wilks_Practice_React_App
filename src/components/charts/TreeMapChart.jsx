@@ -1,25 +1,26 @@
 import { useEffect } from "react";
 import * as d3 from "d3";
-import cssStyles from "../styles";
+import cssStyles from "../../styles";
+
 
 // set the dimensions and margins of the graph
-const margin = { top: 10, right: 10, bottom: 10, left: 10 },
-  width = 500 - margin.left - margin.right,
-  height = 500 - margin.top - margin.bottom;
+const margin = { top: 10, right: 10, bottom: 10, left: 10 };
+const width = 500 - margin.left - margin.right;
+const height = 500 - margin.top - margin.bottom;
 
 const TreeMapChart = ({ data, domain, rangeColours, id }) => {
+
   useEffect(() => {
     // append the svg object to the body of the page
-    const svg = d3.select(`#treeMapChart-${id}`)
-      .append("svg")
-      .attr("width", width + margin.left + margin.right)
-      .attr("height", height + margin.top + margin.bottom)
+    const svg = d3.select(`#${id}`)
+      .attr("width", "auto")
+      .attr("height", "70%")
       .append("g")
       .attr("transform",
         `translate(${margin.left}, ${margin.top})`);
 
     // read json data
-    function createChart (data) {
+    function createChart(data) {
 
       // Give the data to this cluster layout:
       const root = d3.hierarchy(data).sum(function (d) { return d.value }) // Here the size of each leave is given in the 'value' field in input data
@@ -93,13 +94,13 @@ const TreeMapChart = ({ data, domain, rangeColours, id }) => {
     if (data) {
       createChart(data)
     }
-    return () => d3.select("#treeMapChart").remove()
+    return () => d3.select(`#${id}`).remove()
   }, [
     data
   ])
 
   return (
-    <div id={`treeMapChart-${id}`}></div>
+    <svg id={id} viewBox={`0, 0, ${width} ${height}`} />
   )
 }
 

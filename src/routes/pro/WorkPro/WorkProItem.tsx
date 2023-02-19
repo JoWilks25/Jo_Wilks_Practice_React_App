@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import cssStyles from "../../../styles";
 import { H2Styled, H3Styled, Text } from "../../../components/Typography";
 import { Column, Row } from "../../../components/Structural";
-import TreeMapChart from "../../../components/TreeMapChart";
+import TreeMapChart from "../../../components/charts/TreeMapChart";
 
 interface treeMapConfigType {
   data: any;
@@ -40,12 +40,12 @@ const WorkProItem = ({ sectionTitleObj, iconLink, treeMapConfig, jobListPoints, 
           Key Projects
         </H3Styled>
         <ul>
-          { keyProjects?.map(({ title, desc }: any) => (<Text><strong>{title}: </strong>{desc}</Text>)) }
+          { keyProjects?.map(({ title, desc, colour }: any) => (<Text padding="0.25rem 0"><strong style={{ color: `${colour}`}}>{title}: </strong>{desc}</Text>)) }
         </ul>
       </Column>
       {
         treeMapConfig &&
-        <Column className="column" width="50%" padding="0" justifyContent="flex-start">
+        <Column className="column" width="50%" padding="0" justifyContent="flex-start" alignItem="center">
           <TreeMapChart data={treeMapConfig.data} domain={treeMapConfig.domain} rangeColours={treeMapConfig.rangeColours} id={treeMapConfig.id}/>
         </Column>
       }

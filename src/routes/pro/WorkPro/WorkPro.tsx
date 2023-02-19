@@ -57,19 +57,23 @@ const WorkPro = ({ scrollId, setSelectedTab }: WorkProProps): React.ReactElement
         keyProjects={[
           {
             title: 'LMD',
-            desc: 'Built data visualisation dashboards for the banks clients to visualise their data.'
+            desc: 'Built data visualisation dashboards for the banks clients to visualise their data.',
+            colour: '#1f3876'
           },
           {
             title: 'LDS',
-            desc: 'Wrote a python script to encode financial report files into the format required by the bank’s mainframe system.'
+            desc: 'Wrote a python script to encode financial report files into the format required by the bank’s mainframe system.',
+            colour: '#b01514'
           },
           {
             title: 'OMNIA',
-            desc: 'Built complex data visualisation dashboards for internal bank employees to see financial data regarding their clients and the products they have with the company.'
+            desc: 'Built complex data visualisation dashboards for internal bank employees to see financial data regarding their clients and the products they have with the company.',
+            colour: '#006408'
           },
           {
             title: 'CSP',
-            desc: 'Built internal applications used by the bank’s Relationship Managers, to help them manage the input of financial data regarding their clients and also to help visualise the financial status of their commercial clients.'
+            desc: 'Built internal applications used by the bank’s Relationship Managers, to help them manage the input of financial data regarding their clients and also to help visualise the financial status of their commercial clients.',
+            colour: '#fbdf00'
           },
         ]}
       />
@@ -92,15 +96,18 @@ const WorkPro = ({ scrollId, setSelectedTab }: WorkProProps): React.ReactElement
         keyProjects={[
           {
             title: 'RepoUpdater',
-            desc: "Created a tool that updates all the services within the company's github account based on an instructions file, which uses string matching (regex)."
+            desc: "Created a tool that updates all the services within the company's github account based on an instructions file, which uses string matching (regex).",
+            colour: '#b01514'
           },
           {
             title: 'Frontend web app',
-            desc: 'Helped code the frontend service for the client facing web application.'
+            desc: 'Helped code the frontend service for the client facing web application.',
+            colour: '#1f3876'
           },
           {
             title: 'Host Control',
-            desc: 'Worked with the CTO and met with key members of the host control team in order to redesign and automate as many manual processes as possible.'
+            desc: 'Worked with the CTO and met with key members of the host control team in order to redesign and automate as many manual processes as possible.',
+            colour: '#fbdf00'
           },
         ]}
       />
@@ -110,7 +117,7 @@ const WorkPro = ({ scrollId, setSelectedTab }: WorkProProps): React.ReactElement
         <img width="75px" height="75px" src="https://media.licdn.com/dms/image/C4E0BAQGhCAZEwjjJ3g/company-logo_200_200/0/1519904190459?e=1684972800&v=beta&t=jrtJ5_dR0or-YM1gr_-EztPAqxslNzTDjhJRS40tp40" />
         <H2Styled padding="0 0 0 1rem">Software Consultant - Ennovative PTY LTD<br /> SA, Australia, June 2017 - April 2018</H2Styled>
       </Row>
-      <Row className="row" flexDirection="row" justifyContent="space-between" padding="0 0 2rem 0">
+      <Row className="row" flexDirection="row" justifyContent="space-between" padding="0 0 1rem 0">
         <ul>
           <li>Assisted in the design and helped oversee the development of various software solutions for clients, including mobile apps, web apps and implementing customised instances of cloud-based CRM systems.</li>
         </ul>

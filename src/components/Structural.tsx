@@ -60,7 +60,7 @@ export const Column = styled.div<ColumnProps>`
   align-items: ${({ alignItem }) => alignItem || 'center'};
   padding: ${({ padding }) => padding || '1rem'};
   @media only screen and (max-width: 851px) {
-    width: 100%;
+    width: 80%;
     padding: 0;
     justify-content: center;
     align-items: center;
