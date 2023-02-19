@@ -48,18 +48,18 @@ export const programmingData: any = {
 
 
 export const otherSkillsData: any = {
-  labels: ['Management', 'Training', 'Mentoring', 'Consulting', 'Something else?'],
+  labels: ['Management', 'Training', 'Mentoring', 'Consulting', 'Teamwork'],
   datasets: [
     {
       label: 'Experience (Years)',
-      data: [2, 1.5, 2, 3, 1],
+      data: [2, 1.5, 2, 3, 4.5],
       scale: [0, 10],
       ...green,
       borderWidth: 1,
     },
     {
       label: 'Proficiency',
-      data: [3, 3.5, 3.5, 3, 3.5],
+      data: [3, 3.5, 3.5, 3, 4.5],
       scale: [0, 10],
       ...yellow,
       borderWidth: 1,

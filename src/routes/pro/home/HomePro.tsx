@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import styled from "styled-components"
-import useIsElementVisible from "../../utilities/useIsElementVisible"
-import RadarChart from "../../components/RadarChart";
+import useIsElementVisible from "../../../utilities/useIsElementVisible"
+import RadarChart from "../../../components/RadarChart";
 import { programmingData, otherSkillsData, chartOptions } from "./RadarChartData";
-import { H1Styled, H2Styled, PStyled } from "../../components/Typography";
-import { Row, Column } from "../../components/Structural";
+import { H1Styled, H2Styled, PStyled } from "../../../components/Typography";
+import { Row, Column } from "../../../components/Structural";
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import cssStyles from "../../styles";
+import cssStyles from "../../../styles";
 
 const PageWrapper = styled.div`
   height: 100%;

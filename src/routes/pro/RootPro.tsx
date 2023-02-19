@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import NavBar from "../../components/NavBar";
 import styled from "styled-components";
-import HomePro from "./HomePro";
-import WorkPro from "./WorkPro/WorkPro";
+import HomePro from "./home/HomePro";
+import WorkPro from "./work/WorkPro";
 
 const PageWrapper = styled.div`
   height: calc(100vh - 4rem);
