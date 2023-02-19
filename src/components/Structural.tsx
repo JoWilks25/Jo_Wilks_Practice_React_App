@@ -10,9 +10,16 @@ export const Background = styled.div`
   align-items: center;
 `
 
-export const CenterCard = styled.div`
-  width: 50vw;
-  height: 50vh;
+interface Card {
+  width?: string;
+  height?: string;
+  padding?: string;
+}
+
+export const Card = styled.div<Card>`
+  width: ${({ width }) => width || '100%'};
+  height: ${({ height }) => height || '100%'};
+  padding: ${({ padding }) => padding || ''};
 `
 
 interface RowProps {

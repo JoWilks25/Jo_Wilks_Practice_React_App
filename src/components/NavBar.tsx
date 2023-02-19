@@ -1,11 +1,11 @@
 import styled from "styled-components";
+import cssStyles from "../styles";
 
-const backgroundColour = '#050034'
 
 const Header = styled.div<any>`
   width: 100vw;
-  height: 4rem;
-  background-color: ${backgroundColour};
+  height: ${cssStyles.size.heightNavbar};
+  background-color: ${cssStyles.colours.navy};
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -21,13 +21,13 @@ interface LinkContainerProps {
 const LinkContainer = styled.button<LinkContainerProps>`
   height: 100%;
   color: ${({ selected }) => selected ? 'gold' : 'white'};
-  background-color: ${backgroundColour};
+  background-color: ${cssStyles.colours.navy};
   text-decoration: none;
   border: none;
   padding: 0.5rem 2rem;
   font-size: 1.5rem;
   :hover {
-    background-color: #3E55A8;
+    background-color: ${cssStyles.colours.lightGreyishBlue};
     color: gold;
   }
 `
