@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
+const backgroundColour = '#050034'
+
 const Header = styled.div<any>`
   width: 100vw;
   height: 4rem;
-  background-color: #04002E;
+  background-color: ${backgroundColour};
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -18,15 +20,15 @@ interface LinkContainerProps {
 
 const LinkContainer = styled.button<LinkContainerProps>`
   height: 100%;
-  color: ${({ selected }) => selected ? 'red' : 'white'};
-  background-color: #04002E;
+  color: ${({ selected }) => selected ? 'gold' : 'white'};
+  background-color: ${backgroundColour};
   text-decoration: none;
   border: none;
   padding: 0.5rem 2rem;
   font-size: 1.5rem;
   :hover {
     background-color: #3E55A8;
-    color: black;
+    color: gold;
   }
 `
 
