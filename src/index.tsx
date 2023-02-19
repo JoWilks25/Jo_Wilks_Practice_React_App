@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import { createGlobalStyle } from 'styled-components'
 import Root from './routes/Root';
-import MainPro from './routes/pro/MainPro';
+import RootPro from './routes/pro/RootPro';
 import MainFun from './routes/MainFun';
 
 
@@ -33,7 +33,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/professional",
-    element: <MainPro />, // Main Page Professional Version
+    element: <RootPro />, // Main Page Professional Version
   },
   {
     path: "/fun",
