@@ -9,8 +9,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import cssStyles from "../../styles";
 
 const PageWrapper = styled.div`
-  height: calc(100% - ${cssStyles.size.heightNavbar});
-  margin-top: ${cssStyles.size.heightNavbar};
+  height: 100%;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -55,12 +54,12 @@ const HomePro = ({ scrollId, setSelectedTab }: HomeProProps): React.ReactElement
           <a href={"https://www.linkedin.com/in/joanne-wilkins-aa3416146/"} target="_blank" style={{ padding: "1rem", textDecoration: "None", color: "#0A66C2" }}><FaLinkedin size={50} /></a>
         </Column> */}
       </Row>
-      <Row className="row" flexDirection="row" justifyContent="space-evenly" padding="0">
-        <Column className="column" width="35%" padding="0">
+      <Row className="row" flexDirection="row" justifyContent="space-evenly" padding="0" width="100%">
+        <Column className="column" width="35%" padding="0" justifyContent="center">
           <H2Styled fontColour={cssStyles.colours.navy}>Technical Skills</H2Styled>
           <RadarChart data={programmingData} options={chartOptions} />
         </Column>
-        <Column className="column" width="35%" padding="0">
+        <Column className="column" width="35%" padding="0" justifyContent="center">
           <H2Styled fontColour={cssStyles.colours.navy}>Other Skills</H2Styled>
           <RadarChart data={otherSkillsData} options={chartOptions} />
         </Column>

@@ -6,6 +6,7 @@ import WorkPro from "./WorkPro/WorkPro";
 
 const PageWrapper = styled.div`
   height: calc(100vh - 4rem);
+  margin-top: 4rem;
   width: 100vw;
   @media only screen and (max-width: 851px) {
     padding: 0 0 0 0;
@@ -16,7 +17,7 @@ const PageWrapper = styled.div`
 
 const navItems = [
   {
-    text: 'Home',
+    text: 'About',
   },
   {
     text: 'Work',
@@ -29,11 +30,11 @@ const navItems = [
   }
 ]
 const RootPro = (): React.ReactElement => {
-  const [selectedTab, setSelectedTab] = useState<string>('Home');
+  const [selectedTab, setSelectedTab] = useState<string>('About');
 
   const scrollToId = (id: string): void => {
     const element = document?.getElementById(id)
-    element?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+    element?.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
     setSelectedTab(id)
   }
 
@@ -41,7 +42,7 @@ const RootPro = (): React.ReactElement => {
     <React.Fragment>
       <NavBar navItems={navItems} selectedTab={selectedTab} scrollToId={scrollToId} />
       <PageWrapper>
-        <HomePro scrollId="Home" setSelectedTab={setSelectedTab} />
+        <HomePro scrollId="About" setSelectedTab={setSelectedTab} />
         <WorkPro scrollId="Work" setSelectedTab={setSelectedTab} />
         {/* <WorkPro scrollId="Education" setSelectedTab={setSelectedTab} /> */}
         {/* <WorkPro scrollId="Contact" setSelectedTab={setSelectedTab} /> */}

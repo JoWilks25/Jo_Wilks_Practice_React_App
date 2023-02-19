@@ -8,7 +8,7 @@ import treeData from './TreeMapChartData'
 import WorkProItem from "./WorkProItem";
 
 const PageWrapper = styled.div`
-  margin-top: ${cssStyles.size.heightNavbar};
+  height: 100%;
   display: flex;
   flex-direction: column;
   padding: 0 ${cssStyles.size.heightNavbar};
@@ -111,8 +111,7 @@ const WorkPro = ({ scrollId, setSelectedTab }: WorkProProps): React.ReactElement
           },
         ]}
       />
-
-      {/* Ennovative */}
+      {/* Ennovative
       <Row className="row" flexDirection="row" justifyContent="flex-start">
         <img width="75px" height="75px" src="https://media.licdn.com/dms/image/C4E0BAQGhCAZEwjjJ3g/company-logo_200_200/0/1519904190459?e=1684972800&v=beta&t=jrtJ5_dR0or-YM1gr_-EztPAqxslNzTDjhJRS40tp40" />
         <H2Styled padding="0 0 0 1rem">Software Consultant - Ennovative PTY LTD<br /> SA, Australia, June 2017 - April 2018</H2Styled>
@@ -121,7 +120,7 @@ const WorkPro = ({ scrollId, setSelectedTab }: WorkProProps): React.ReactElement
         <ul>
           <li>Assisted in the design and helped oversee the development of various software solutions for clients, including mobile apps, web apps and implementing customised instances of cloud-based CRM systems.</li>
         </ul>
-      </Row>
+      </Row> */}
     </PageWrapper>
   )
 }
