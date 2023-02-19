@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import { Text } from "../components/Typography";
-import { Row, Background, CenterCard } from "../components/Structural";
+import { Row, Background, Card } from "../components/Structural";
 
 
 interface FadeInProps {
@@ -46,7 +46,7 @@ const LinkButton = styled.a<LinkButtonProps>`
 
 const Root = (): React.ReactElement =>
   <Background>
-    <CenterCard>
+    <Card width="50vw" height="50vh">
       <Row padding="2rem 0">
         <FadeIn duration="2s" delay="0.5s">
           <Text fontColour="white" fontSize="2.5rem">Welcome to Jo's Portfolio</Text>
@@ -65,7 +65,7 @@ const Root = (): React.ReactElement =>
           <LinkButton href='/fun' glowColour="red">A bit of fun</LinkButton>
         </FadeIn>
       </Row>
-    </CenterCard>
+    </Card>
   </Background>
 
 export default Root

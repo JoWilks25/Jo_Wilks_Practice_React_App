@@ -27,18 +27,18 @@ const red = {
 }
 
 export const programmingData: any = {
-  labels: ['Javascript', 'Typescript', 'Python', 'React (hooks based)', 'Micro Frontends', 'Git'],
+  labels: ['Javascript', 'Typescript', 'Python', 'React (hooks based)', 'Git'],
   datasets: [
     {
       label: 'Experience (Years)',
-      data: [4.5, 1.5, 1.5, 5, 1.5, 4.5],
+      data: [4.5, 1.5, 1.5, 5, 4.5],
       scale: [0, 10],
       ...blue,
       borderWidth: 1,
     },
     {
       label: 'Proficiency',
-      data: [4, 3, 3, 4, 3, 4],
+      data: [4, 3, 3, 4, 4],
       scale: [0, 10],
       ...red,
       borderWidth: 1,
@@ -48,18 +48,18 @@ export const programmingData: any = {
 
 
 export const otherSkillsData: any = {
-  labels: ['Management', 'Training/Mentoring', 'Consulting'],
+  labels: ['Management', 'Training', 'Mentoring', 'Consulting', 'Teamwork'],
   datasets: [
     {
       label: 'Experience (Years)',
-      data: [2, 1.5, 3],
+      data: [2, 1.5, 2, 3, 4.5],
       scale: [0, 10],
       ...green,
       borderWidth: 1,
     },
     {
       label: 'Proficiency',
-      data: [3, 3.5, 3],
+      data: [3, 3.5, 3.5, 3, 4.5],
       scale: [0, 10],
       ...yellow,
       borderWidth: 1,

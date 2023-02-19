@@ -10,9 +10,16 @@ export const Background = styled.div`
   align-items: center;
 `
 
-export const CenterCard = styled.div`
-  width: 50vw;
-  height: 50vh;
+interface Card {
+  width?: string;
+  height?: string;
+  padding?: string;
+}
+
+export const Card = styled.div<Card>`
+  width: ${({ width }) => width || '100%'};
+  height: ${({ height }) => height || '100%'};
+  padding: ${({ padding }) => padding || ''};
 `
 
 interface RowProps {
@@ -29,6 +36,12 @@ export const Row = styled.div<RowProps>`
   width: ${({ width }) => width || '100%'};
   justify-content: ${({ justifyContent }) => justifyContent || 'center'};
   padding: ${({ padding }) => padding || '1rem'};
+  @media only screen and (max-width: 851px) {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    justify-content: center;
+  }
 `
 
 interface ColumnProps {
@@ -46,4 +59,10 @@ export const Column = styled.div<ColumnProps>`
   justify-content: ${({ justifyContent }) => justifyContent || 'center'};
   align-items: ${({ alignItem }) => alignItem || 'center'};
   padding: ${({ padding }) => padding || '1rem'};
+  @media only screen and (max-width: 851px) {
+    width: 80%;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+  }
 `
