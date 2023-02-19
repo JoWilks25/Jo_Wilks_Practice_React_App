@@ -4,13 +4,13 @@ import cssStyles from "../styles";
 
 // set the dimensions and margins of the graph
 const margin = { top: 10, right: 10, bottom: 10, left: 10 },
-  width = 445 - margin.left - margin.right,
-  height = 445 - margin.top - margin.bottom;
+  width = 500 - margin.left - margin.right,
+  height = 500 - margin.top - margin.bottom;
 
-const TreeMapChart = ({ data, chartTitle, domain, rangeColours }) => {
+const TreeMapChart = ({ data, domain, rangeColours, id }) => {
   useEffect(() => {
     // append the svg object to the body of the page
-    const svg = d3.select("#treeMapChart")
+    const svg = d3.select(`#treeMapChart-${id}`)
       .append("svg")
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
@@ -68,18 +68,6 @@ const TreeMapChart = ({ data, chartTitle, domain, rangeColours }) => {
         .attr("font-size", "0.75rem")
         .attr("fill", "white")
 
-      // // Add values to boxes
-      // svg
-      //   .selectAll("vals")
-      //   .data(root.leaves())
-      //   .enter()
-      //   .append("text")
-      //   .attr("x", function (d) { return d.x0 + 5 })    // +10 to adjust position (more right)
-      //   .attr("y", function (d) { return d.y0 + 35 })    // +20 to adjust position (lower)
-      //   .text(function (d) { return d.data.value })
-      //   .attr("font-size", "0.5rem")
-      //   .attr("fill", "white")
-
       // Add title for the groups
       svg
         .selectAll("titles")
@@ -97,7 +85,7 @@ const TreeMapChart = ({ data, chartTitle, domain, rangeColours }) => {
         .append("text")
         .attr("x", 0)
         .attr("y", 14)    // +20 to adjust position (lower)
-        .text(chartTitle)
+        .text(data.name)
         .attr("font-size", "1rem")
         .attr("fill", cssStyles.colours.navy)
 
@@ -111,7 +99,7 @@ const TreeMapChart = ({ data, chartTitle, domain, rangeColours }) => {
   ])
 
   return (
-    <div id="treeMapChart"></div>
+    <div id={`treeMapChart-${id}`}></div>
   )
 }
 

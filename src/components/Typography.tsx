@@ -20,6 +20,12 @@ color: ${({ fontColour }) => fontColour || 'black'};
 padding: ${({ padding }) => padding || ''};
 `
 
+export const H3Styled = styled.h3<TextProps>`
+font-size: ${({ fontSize }) => fontSize || ''};
+color: ${({ fontColour }) => fontColour || 'black'};
+padding: ${({ padding }) => padding || ''};
+`
+
 export const PStyled = styled.p<TextProps>`
 font-size: ${({ fontSize }) => fontSize || '1rem'};
 color: ${({ fontColour }) => fontColour || 'black'};
