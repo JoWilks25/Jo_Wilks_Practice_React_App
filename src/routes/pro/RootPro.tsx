@@ -38,8 +38,8 @@ const RootPro = (): React.ReactElement => {
       <PageWrapper>
         <HomePro scrollId="Home" setSelectedTab={setSelectedTab} />
         <WorkPro scrollId="Work" setSelectedTab={setSelectedTab} />
-        <WorkPro scrollId="Education" setSelectedTab={setSelectedTab} />
-        <WorkPro scrollId="Contact" setSelectedTab={setSelectedTab} />
+        {/* <WorkPro scrollId="Education" setSelectedTab={setSelectedTab} /> */}
+        {/* <WorkPro scrollId="Contact" setSelectedTab={setSelectedTab} /> */}
       </PageWrapper>
     </React.Fragment>
   )

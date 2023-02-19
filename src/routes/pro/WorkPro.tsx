@@ -2,8 +2,10 @@ import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import useIsElementVisible from "../../utilities/useIsElementVisible";
 import { H1Styled, H2Styled } from "../../components/Typography";
-import { Row } from "../../components/Structural";
+import { Column, Row } from "../../components/Structural";
 import cssStyles from "../../styles";
+import TreeMapChart from '../../components/TreeMapChart';
+import calibrateTreeMapData, { domain, rangeColours } from './TreeMapChartData'
 
 const headerFontColour = "#050034"
 
@@ -42,13 +44,19 @@ const WorkPro = ({ scrollId, setSelectedTab }: WorkProProps): React.ReactElement
         <H2Styled padding="0 0 0 1rem">Senior Web Consultant - Calibrate Consulting <br /> London UK, Jan 2020 - Current</H2Styled>
       </Row>
       <Row className="row" flexDirection="row" justifyContent="space-between" padding="0 0 2rem 0">
-        <ul>
-          <li>Build React Web Apps as per provided UI designs for our large banking client.</li>
-          <li>Communicating with technical and non-technical team members to ensure applications are built correctly and on time.</li>
-          <li>Managing complex Production Releases involving cherry-picking features and feature toggling.</li>
-          <li>Running the Junior Web Developer (JWD) program, and mentoring junior developers.</li>
-          <li>Assisting in the technical interview process.</li>
-        </ul>
+        <Column className="column" width="50%" padding="0" justifyContent="flex-start">
+          <ul>
+            <li>Build React Web Apps as per provided UI designs for our large banking client.</li>
+            <li>Communicating with technical and non-technical team members to ensure applications are built correctly and on time.</li>
+            <li>Managing complex Production Releases involving cherry-picking features and feature toggling.</li>
+            <li>Running the Junior Web Developer (JWD) program, and mentoring junior developers.</li>
+            <li>Assisting in the technical interview process.</li>
+          </ul>
+        </Column>
+        <Column className="column" width="50%" padding="0" justifyContent="flex-start">
+          <TreeMapChart data={calibrateTreeMapData} chartTitle="% Tech Stack allocation for different Projects" domain={domain} rangeColours={rangeColours} />
+        </Column>
+
       </Row>
       {/* Arkera */}
       <Row className="row" flexDirection="row" justifyContent="flex-start">
