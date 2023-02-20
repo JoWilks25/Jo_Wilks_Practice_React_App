@@ -29,18 +29,18 @@ const GlobalStyle = createGlobalStyle`
 `
 
 const router = createBrowserRouter([
+  // {
+  //   path: "/",
+  //   element: <Root />, // CoverPage - Still in Progress
+  // },
   {
     path: "/",
-    element: <Root />, // CoverPage
-  },
-  {
-    path: "/professional",
     element: <RootPro />, // Main Page Professional Version
   },
-  {
-    path: "/fun",
-    element: <MainFun />, // Main Page Fun Version
-  },
+  // {
+  //   path: "/fun",
+  //   element: <MainFun />, // Main Page Fun Version - Still in progres
+  // },
 ]);
 
 const root = ReactDOM.createRoot(
