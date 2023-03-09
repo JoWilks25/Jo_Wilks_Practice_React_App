@@ -5,31 +5,31 @@ const calibrateTreeMapData: any = {
       "children": [
         {
           "name": "React (hooks)",
-          "group": "A",
+          "projectName": "LMD",
           "value": 50,
           "colname": "level3"
         },
         {
           "name": "Enigma.js",
-          "group": "A",
+          "projectName": "LMD",
           "value": 10,
           "colname": "level3"
         },
         {
           "name": "Nebula.js",
-          "group": "C",
+          "projectName": "LMD",
           "value": 25,
           "colname": "level3"
         },
         {
           "name": "d3.js",
-          "group": "C",
+          "projectName": "LMD",
           "value": 5,
           "colname": "level3"
         },
         {
           "name": "Node.js",
-          "group": "C",
+          "projectName": "LMD",
           "value": 10,
           "colname": "level3"
         }
@@ -41,7 +41,7 @@ const calibrateTreeMapData: any = {
       "children": [
         {
           "name": "Python",
-          "group": "C",
+          "group": "LDS",
           "value": 100,
           "colname": "level3"
         },
@@ -53,19 +53,19 @@ const calibrateTreeMapData: any = {
       "children": [
         {
           "name": "React (hooks)",
-          "group": "A",
+          "projectName": "OMNIA",
           "value": 50,
           "colname": "level3"
         },
         {
           "name": "Enigma.js",
-          "group": "A",
+          "projectName": "OMNIA",
           "value": 35,
           "colname": "level3"
         },
         {
           "name": "d3.js",
-          "group": "C",
+          "projectName": "OMNIA",
           "value": 15,
           "colname": "level3"
         },
@@ -77,7 +77,7 @@ const calibrateTreeMapData: any = {
       "children": [
         {
           "name": "React (hooks)",
-          "group": "A",
+          "projectName": "CSP",
           "value": 100,
           "colname": "level3"
         },
@@ -168,7 +168,7 @@ const arkeraDomain = [
   'Host Control',
 ]
 
-const arkeraRangeColours = ['#b01514', '#1f3876', '#fbdf00']
+const arkeraRangeColours = ['#b01514', '#1f3876', '#006408']
 
 
 export default {

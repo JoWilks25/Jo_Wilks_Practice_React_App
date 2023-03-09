@@ -3,8 +3,11 @@ import NavBar from "../../components/NavBar";
 import styled from "styled-components";
 import HomePro from "./home/HomePro";
 import WorkPro from "./work/WorkPro";
+import EducationPro from './education/EducationPro';
 
 const PageWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   height: calc(100vh - 4rem);
   margin-top: 4rem;
   width: 100vw;
@@ -34,7 +37,7 @@ const RootPro = (): React.ReactElement => {
 
   const scrollToId = (id: string): void => {
     const element = document?.getElementById(id)
-    element?.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+    element?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
     setSelectedTab(id)
   }
 
@@ -44,6 +47,7 @@ const RootPro = (): React.ReactElement => {
       <PageWrapper>
         <HomePro scrollId="About" setSelectedTab={setSelectedTab} />
         <WorkPro scrollId="Work" setSelectedTab={setSelectedTab} />
+        <EducationPro scrollId="Education" setSelectedTab={setSelectedTab} />
         {/* <WorkPro scrollId="Education" setSelectedTab={setSelectedTab} /> */}
         {/* <WorkPro scrollId="Contact" setSelectedTab={setSelectedTab} /> */}
       </PageWrapper>

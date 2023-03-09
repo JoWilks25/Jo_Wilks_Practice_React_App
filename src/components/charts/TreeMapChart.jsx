@@ -50,13 +50,21 @@ const TreeMapChart = ({ data, domain, rangeColours, id }) => {
         .selectAll("rect")
         .data(root.leaves())
         .join("rect")
+        .attr('cursor', 'pointer')
         .attr('x', function (d) { return d.x0; })
         .attr('y', function (d) { return d.y0; })
         .attr('width', function (d) { return d.x1 - d.x0; })
         .attr('height', function (d) { return d.y1 - d.y0; })
         .style("fill", function (d) { return color(d.parent.data.name) })
         .style("opacity", function (d) { return opacity(d.data.value / 2) })
-
+        // .on("mouseover", (d) => {
+        //   console.log('d', d)
+        //   console.log('d.srcElement.__data__.data', d.srcElement.__data__.data)
+        //   // Generate tooltip
+        // })
+        // .on("click", (d) => {
+        //   // Adjust data to display and narrow 
+        // })
       // Add Names within the boxes
       svg
         .selectAll("text")

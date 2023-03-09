@@ -8,7 +8,7 @@ import treeData from './TreeMapChartData'
 import WorkProItem from "./WorkProItem";
 
 const PageWrapper = styled.div`
-  height: 100%;
+  // height: 100%;
   display: flex;
   flex-direction: column;
   padding: 0 ${cssStyles.size.heightNavbar};
